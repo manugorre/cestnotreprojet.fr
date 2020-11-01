@@ -11,7 +11,15 @@
         <meta name="msapplication-tap-highlight" content="no">
 
         <style media="screen">
-            body {text-align: center; margin-top: 10%;}
+            :root {
+                --body-bg: white;
+            }
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --body-bg: #151515;
+                }
+            }
+            body { background: var(--body-bg); text-align: center; margin-top: 10%; }
         </style>
     </head>
     <body>
