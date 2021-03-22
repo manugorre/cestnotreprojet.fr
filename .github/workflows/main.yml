@@ -19,3 +19,4 @@ jobs:
         registry: docker.pkg.github.com
         tags: manugorre/cestnotreprojet
         tag_with_ref: true
+        context: ./app
