@@ -27,7 +27,7 @@ jobs:
           push: true
           tags: manugorre/cestnotreprojet.fr
           context: ./app
-          file: ./Dockerfile
+          file: ./app/Dockerfile
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
