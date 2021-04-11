@@ -2,17 +2,14 @@ version: '3.9'
 
 services:
     nginx:
-        #image: nginx:1.19.1-alpine
         build: ./app/
         restart: unless-stopped
         ports:
             - "2000:80"
         env_file:
             - ./.env
-        #volumes:
-        #    - ./app/www:/var/www
-        #    - ./docker/nginx:/etc/nginx/conf.d
-        #    - ./docker/log/nginx:/var/log/nginx
+        volumes:
+            - ./app/www:/var/www
         networks:
             - reverse-proxy-network
             - internal-network
