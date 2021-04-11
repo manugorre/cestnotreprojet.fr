@@ -16,9 +16,7 @@ jobs:
           username: ${{ secrets.SERVER_HOST }}
           key: ${{ secrets.SERVER_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          script: |
-            whoami
-            ls -al
+          script: ls -al
 #      - uses: actions/checkout@v2
 #
 #      - name: Set up Docker Buildx
